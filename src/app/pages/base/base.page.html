@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="container page">
+    <div class="content">
+      <div class="left" >
+
+        <div class="link-box-container"  *ngFor="let page of currentPage; let i = index" (click)="setCurrentGroup(page)">
+          <div *ngIf="i!=0" class="link-box">
+            <ion-text>{{page.title}}</ion-text>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right" *ngIf="currentGroup">
+        <div class="header"><ion-text color="primary"><h3>{{currentGroup.title}}</h3></ion-text></div>
+        <div class="right-content" *ngFor="let item of currentGroup.content">
+          <app-base-item [item]="item"></app-base-item>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>

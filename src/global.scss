@@ -1,0 +1,109 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+:root {
+  --primary: #5c8727;
+  --primary-accent: #76ad34;
+  --secondary: #70420f;
+  --light-background: #efebe2;
+  --medium-background: #ebe6dd;
+  --dark-background: #673600;
+}
+
+//scrollbar
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b8b8b865;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--faded);
+}
+
+
+//text field and form item
+
+ion-label{
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 10pt;
+}
+p{
+  font-family: sans-serif;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+li{
+font-family: sans-serif;
+font-size: 10pt;
+font-weight: normal;
+}
+
+
+.title{
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.content{
+  width: 70%;
+  // background-color: var(--light-background);
+  padding: 5%;
+}
+
+.page{
+    height: calc(100%);
+    overflow-y: auto;
+    background-image: url('./assets/bg-down.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #f8f7f3;
+}
+

@@ -1,0 +1,65 @@
+<div class="text-container">
+
+  <div *ngIf="noChoiceMade ; else choiceMade" class="select-type-form">
+    <!-- title -->
+    <div class="title">
+      <ion-label>
+        Direct aan de slag
+      </ion-label>
+    </div>
+
+    <!-- text -->
+    <div  *ngFor="let p of text ">
+      <p>{{p}}</p>
+    </div>
+
+    <div class="title">
+      <ion-label>Kies nu de door u gewenste ondernemingsvorm:</ion-label>
+    </div>
+    <!-- select type form -->
+    <ion-list>
+      <ion-radio-group [(ngModel)]="userSelectedType" >
+
+        <ion-item *ngFor="let item of choices" lines="none" class="choices">
+          <ion-label>{{item.name}}</ion-label>
+          <ion-radio slot="start" [value]="item.id"></ion-radio>
+        </ion-item>
+
+      </ion-radio-group>
+    </ion-list>
+
+
+    <!-- button -->
+    <div class="link">
+     <ion-button (click)="setNoChoiceMade(false)">Ga verder</ion-button>
+    </div>
+  </div>
+
+  <ng-template #choiceMade >
+    <div class="title">
+      <ion-label>
+        Product: {{choices[userSelectedType].name}}
+      </ion-label>
+      <p>Prijs: €{{choices[userSelectedType].price}}.-</p>
+    </div>
+
+    <ion-list>
+      <div *ngFor="let item of form" class="form-item">
+
+        <ion-item *ngIf="item.title" class="title">
+          <ion-label>
+            {{item.title}}
+          </ion-label>
+        </ion-item>
+
+
+        <ion-item *ngFor="let field of item.fields" lines="none">
+          <ion-label>{{field.name}}</ion-label>
+          <ion-input slot="end" type="text" [(ngModel)]="field.value"></ion-input>
+        </ion-item>
+
+      </div>
+    </ion-list>
+  </ng-template>
+
+</div>

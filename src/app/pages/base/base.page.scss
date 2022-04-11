@@ -1,0 +1,46 @@
+@import "../../../global.scss";
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+.left{
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column!important;
+}
+
+.right{
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.right .right-content{
+  margin-left: 10px;
+}
+
+.link-box{
+  cursor: pointer;
+  text-align: right;
+  background-color: var(--primary-accent);
+  margin-bottom: 5px;
+  padding-right: 10px;
+  height: 40px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  align-items: center;
+}
+.link-box ion-text{
+  color: white;
+}
+
+.header{
+  border-bottom: 1px solid var(--secondary) ;
+}
+h3{
+  margin-top: 0px;
+  padding-top: 0px;
+}

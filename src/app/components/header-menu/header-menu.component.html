@@ -1,0 +1,16 @@
+<ion-content>
+  <div class="container">
+    <div class="phone-number">
+      <a href="tel:0031853301020">Telefoon: 085-330 1020</a>
+    </div>
+    <div class="logo">
+      <img src="../assets/logo.png">
+    </div>
+    <div class="content" *ngIf="pages">
+      <ion-text *ngFor="let page of pages; let i = index" [ngClass]="{'border-right':i !== pages.length-1}" class="link" (click)="navigateTo(page.navigation.basePage)">
+        {{page.title}}
+      </ion-text>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,53 @@
+@import "../../../global.scss";
+.container{
+  min-height: 150px;
+  background-color: var(--medium-background);
+  border-bottom: solid 1px var(--secondary) !important;
+}
+.content{
+  padding-top: 95px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.logo img{
+  position: absolute;
+  top: 15px;
+  left: calc(20% - 55px);
+}
+
+.link{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  font-family: 'Muli';
+  font-size: 18pt;
+  font-style: normal;
+  font-weight: 200;
+}
+
+.link:hover{
+  border-bottom: solid 1px var(--primary);
+}
+
+.border-right{
+  border-right: solid 1px ;
+  border-color: var(--secondary);
+}
+.phone-number{
+  position: absolute;
+  right: calc(20% + 10px);
+  top: 30px
+}
+.phone-number a{
+  font-size: x-large;
+}
+
+@media only screen and (min-width: 900px) {
+  .link{
+    font-size: 14pt;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Ostrea",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,16 @@
+<ion-content>
+  <div class="container page">
+    <div class="content">
+      <div class="divider">
+        <div class="left">
+          <div *ngFor="let item of leftText">
+            <app-text-field [title]="item.title" [text]="item.text" [linkText]="item.linkText" [navigation]="item.navigation"></app-text-field>
+          </div>
+        </div>
+        <div class="right">
+         <app-text-field [imgUrl]="'assets\\images\\handen.jpg'" [title]="'Company formation'" [text]="rightText" [navigation]="{basePage: 'https://www.gov.uk/government/publications/formation-and-company-secretarial-agents/company-formation-agents-and-secretarial-agents'}" [linkText]="'Zie website Companies House.'"> </app-text-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

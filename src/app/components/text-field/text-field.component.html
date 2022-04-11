@@ -1,0 +1,29 @@
+<div class="text-container">
+  <!-- image -->
+  <img *ngIf="imgUrl" [src]="imgUrl" alt="image">
+
+  <!-- title -->
+  <div class="title">
+    <ion-label *ngIf="title">
+    {{title}}
+    </ion-label>
+  </div>
+
+  <!-- text -->
+  <div *ngFor="let p of text ">
+    <p>{{p}}</p>
+  </div>
+
+  <div *ngFor="let li of list">
+    <li>{{li}}</li>
+  </div>
+
+  <div *ngFor="let p of text2">
+    <p>{{p}}</p>
+  </div>
+  <!-- link -->
+  <div class="link" *ngIf="linkText || button" (click)="goTo(navigation.basePage, navigation.subPage)">
+   <ion-button *ngIf="button">{{button.buttonText}}</ion-button> <ion-text color="primary">{{linkText}}</ion-text>
+  </div>
+
+</div>
